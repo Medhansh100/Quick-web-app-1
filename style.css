@@ -1,0 +1,155 @@
+#score{
+    margin-left: 5px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+#timer{
+    float: right;
+    margin-right: 5px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    background-color: greenyellow;
+}
+h1{
+    color: rgb(38,0,255);
+    font-family: 'Oswald', sans-serif;
+    margin-left: 80px;
+}
+#show_sketch{
+    float: right;
+}
+p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color: black;
+}
+#sketch_to_be_drawn{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color: red;
+}
+
+canvas{
+    border:5px solid white;
+    border-radius:20px;
+    animation-name: example;
+    animation-duration: 4s;
+    margin-top: 50px; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+
+    from {box-shadow: 1px 1px 38px yellow;}
+    to {box-shadow: 1px 1px 38px red;}
+  
+  }
+  *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'poppins', sans-serif;
+  }
+
+  body
+  {
+   
+  }
+
+  .container
+  {
+    display: flex;
+    
+    flex-wrap: wrap;
+  }
+
+  .container a
+  {
+      position: relative;
+      display: inline-block;
+      border: 2px solid #0f0;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #fff;
+      -webkit-box-reflect: below 0px linear-gradient
+      (transperent,#0002);
+      transition: 0.5s;
+      transition-delay: 0s;
+  }
+
+  .container a:hover
+  {
+    transition-delay: 1.5s;
+    color:white;
+box-shadow: 0 0 10px red;
+    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 40px red;
+    box-shadow: 0 0 80px red;
+    box-shadow: 0 0 160px red;
+  }
+  .container a span
+  {
+    position: relative;
+    z-index: 100;
+  }
+  .container a:nth-child(2)
+  {
+    filter: hue-rotate(80deg);
+  }
+  .container a::before
+  {
+    content: '';
+    position: absolute;
+    left:-20px;
+    top:50%;
+    transform: translateY(-50%);
+    width:20px;
+    height:2px;
+    background: black;
+    box-shadow: 5px -8px 0 black;
+    box-shadow: 5px -8px 0 black;
+    transition: width 0.5s,left 0.5s, height 0.5s,
+    box-shadow 0.5s ;
+    transition-delay: 1s,0.5s,0s,0s;
+  }
+  .container a:hover::before
+  {
+    width:60%;
+    height:100%;
+    left:-2px;
+    box-shadow: 5px 0px 0 black;
+    box-shadow: 5px 0px 0 black;
+    transition-delay: 0s,0.5s,1s,1s;
+  }
+
+
+
+
+  .container a::after
+  {
+    content: '';
+    position: absolute;
+    right:-20px;
+    top:50%;
+    transform: translateY(-50%);
+    width:20px;
+    height:2px;
+    background: black;
+    box-shadow: 5px -8px 0 black;
+    box-shadow: 5px -8px 0 black;
+    transition: width 0.5s,left 0.5s, height 0.5s,
+    box-shadow 0.5s ;
+    transition-delay: 1s,0.5s,0s,0s;
+  }
+  .container a:hover::after
+  {
+    width:60%;
+    height:100%;
+    right:-2px;
+    box-shadow: -5px 0px 0 black;
+    box-shadow: -5px 0px 0 black;
+    transition-delay: 0s,0.5s,1s,1s;
+  }
